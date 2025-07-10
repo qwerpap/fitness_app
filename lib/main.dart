@@ -1,3 +1,6 @@
+import 'package:fitness_app/constants/app_strings.dart';
+import 'package:fitness_app/features/main_screen/view/main_screen.dart';
+import 'package:fitness_app/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: AppStrings.appName,
+      theme: theme,
+      home: MainScreen(),
+    );
   }
 }
